@@ -1,0 +1,129 @@
+@server=http://localhost:4004
+@username=alice
+@password=1234
+
+
+### ProductHeader
+# @name ProductHeader_GET
+GET {{server}}/odata/v4/catalog/ProductHeader
+Authorization: Basic {{username}}:{{password}}
+
+
+### ProductHeader
+# @name ProductHeader_POST
+POST {{server}}/odata/v4/catalog/ProductHeader
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "14953689-3ff5-4ad6-bd2a-94e794fc7b02",
+  "NAME": "NAME-14953689",
+  "STATUS": "S-14953689",
+  "SUPPLIER": "SUPPLIER-14953689",
+  "DOM": "2008-02-14",
+  "INSTOCK": false,
+  "ITEMS": [
+    {
+      "PR_ITEMS_ID": "PrItems-7102429",
+      "ITEM": "PrItems-7102429",
+     "TYPE_ITEM": "EM-7102429",
+      "STATUS_ITEM": "EM-7102429",
+       "ITEM_NAME": "ITEM_NAME-7102429",
+      "INSTOCK_ITEM": false
+    },
+    {
+      "PR_ITEMS_ID": "PrItems-7102430",
+      "ITEM": "PrItems-7102430",
+      "ITEM_NAME": "ITEM_NAME-7102430",
+      "TYPE_ITEM": "EM-7102430",
+      "STATUS_ITEM": "EM-7102430",
+      "INSTOCK_ITEM": true
+    }
+  ]
+}
+
+
+### ProductHeader
+# @name ProductHeader_PATCH
+PATCH {{server}}/odata/v4/catalog/ProductHeader/14953689-3ff5-4ad6-bd2a-94e794fc7b02
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "14953689-3ff5-4ad6-bd2a-94e794fc7b02",
+  "NAME": "NAME-14953689",
+  "STATUS": "S-14953689",
+  "SUPPLIER": "SUPPLIER-14953689",
+  "DOM": "2008-02-14",
+  "INSTOCK": false,
+  "ITEMS": [
+    {
+      "PR_ITEMS_ID": "PrItems-7102429",
+      "ITEM": "PrItems-7102429",
+      "ITEM_NAME": "ITEM_NAME-Copper",
+      "TYPE_ITEM": "EM-7102429",
+      "STATUS_ITEM": "EM-7102429",
+      "INSTOCK_ITEM": false
+    },
+    {
+      "PR_ITEMS_ID": "PrItems-7102430",
+      "ITEM": "PrItems-7102430",
+      "ITEM_NAME": "ITEM_NAME-7102430",
+      "TYPE_ITEM": "EM-7102430",
+      "STATUS_ITEM": "EM-7102430",
+      "INSTOCK_ITEM": true
+    }
+  ]
+}
+
+
+### ProductHeader
+# @name ProductHeader_DELETE
+DELETE {{server}}/odata/v4/catalog/ProductHeader/aab53600-3ff5-4ac6-bd2a-94e794fc7b02
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### PrItems
+# @name PrItems_GET
+GET {{server}}/odata/v4/catalog/PrItems
+Authorization: Basic {{username}}:{{password}}
+
+
+### PrItems
+# @name PrItems_POST
+POST {{server}}/odata/v4/catalog/PrItems
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "PR_ITEMS_ID": "PrItems-7102429",
+  "ITEM": "PrItems-7102429",
+  "ITEM_NAME": "ITEM_NAME-7102429",
+  "TYPE_ITEM": "EM-7102429",
+  "STATUS_ITEM": "EM-7102429",
+  "INSTOCK_ITEM": false
+}
+
+
+### PrItems
+# @name PrItems_PATCH
+PATCH {{server}}/odata/v4/catalog/PrItems(PR_ITEMS_ID='PrItems-7102429',ITEM='PrItems-7102429')
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "PR_ITEMS_ID": "PrItems-7102429",
+  "ITEM": "PrItems-7102429",
+  "ITEM_NAME": "ITEM_NAME-7102429",
+  "TYPE_ITEM": "EM-7102429",
+  "STATUS_ITEM": "EM-7102429",
+  "INSTOCK_ITEM": false
+}
+
+
+### PrItems
+# @name PrItems_DELETE
+DELETE {{server}}/odata/v4/catalog/PrItems(PR_ITEMS_ID='PrItems-7102429',ITEM='PrItems-7102429')
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

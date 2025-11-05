@@ -1,0 +1,13 @@
+
+# GET http://localhost:4004/odata/v4/catalog/getProductInfo(aName='Stainless Steal')
+
+
+POST http://localhost:4004/odata/v4/catalog/insertProductData
+Content-Type: application/json
+
+{   "oID": "ddb53600-3ff5-4ac6-bd2a-94e794fc7b02",
+    "oName": "Argon",
+    "oStatus": "Active",
+    "oSupplier": "US Ltd."
+
+}
